@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Out of Bag and k-Fold Validation '
+date: '2017-02-26T07:26:00.001-08:00'
+author: Sujay S Kumar
+tags: 
+modified_time: '2017-02-26T07:26:37.358-08:00'
+thumbnail: https://1.bp.blogspot.com/-KgZmViuVUkI/WLLzWZgtfsI/AAAAAAAAIug/aFSTZhvaF90nrjQucGmUvi9PiBx_61XUgCLcB/s72-c/k-fold.png
+blogger_id: tag:blogger.com,1999:blog-925060870564624560.post-8006134997865210221
+blogger_orig_url: http://sujayskumar.blogspot.com/2017/02/out-of-bag-and-k-fold-validation.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Two of the main validation techniques for CART models are Out-Of-Bag (OOB) validation and k-Fold validation.<br /><br />OOB - Used mainly for Random Forests.<br />k-Fold - Used mainly for XGB models<br /><br /><b>Out-Of-Bag (OOB) Validation:</b><br /><br />OOB validation is a technique where each tree sample not used in the construction of the current tree becomes the test set for the current tree.<br /><br />As we know, in a random forest, a random selection of data and/or variables is chosen as a subset for training for each tree. This means that only a sample of the entire training set is used for training a tree. The remaining points belong to the out-of-bag set and is used for validation.<br /><br /><b>k-Fold Cross Validation:</b><br /><br />Keeping a fixed set of data points for validation might not be conducive for models like XGB. Hence, a k-fold validation is used. In a k-fold method, the entire dataset is divided into k folds. One of the fold is used for validation and the others are used for training. The final performance metric is the average of the metric of each fold.<br /><br />Usually, the number of folds is taken to be 10.<br /><br />The following illustration better explains a 10-fold cross validation.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-KgZmViuVUkI/WLLzWZgtfsI/AAAAAAAAIug/aFSTZhvaF90nrjQucGmUvi9PiBx_61XUgCLcB/s1600/k-fold.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="https://1.bp.blogspot.com/-KgZmViuVUkI/WLLzWZgtfsI/AAAAAAAAIug/aFSTZhvaF90nrjQucGmUvi9PiBx_61XUgCLcB/s400/k-fold.png" width="400" /></a></div><br /></div>

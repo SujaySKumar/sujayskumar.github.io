@@ -1,0 +1,12 @@
+---
+layout: post
+title: Points to consider while building a Machine Learning model
+date: '2017-02-18T22:00:00.002-08:00'
+author: Sujay S Kumar
+tags: 
+modified_time: '2017-02-26T07:31:51.922-08:00'
+blogger_id: tag:blogger.com,1999:blog-925060870564624560.post-2373839901009698570
+blogger_orig_url: http://sujayskumar.blogspot.com/2017/02/points-to-consider-while-building.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">The objective of this post is to list down some of the pointers to keep in mind while building a Machine Learning model.<br /><br /><ul style="text-align: left;"><li>Always start with the simplest of models. You can increase the complexity if the performance of a simple model is inadequate.</li><li>Understand your dataset first.&nbsp;</li><li>Build a baseline model before building any prediction model. I will expand on this further in another post.</li><li>Complex models tend to over fit and simpler models tend to under fit. It is your job to find a balance between these two.</li><li><b>High bias and low variance</b> - A property of simpler models. Suggests under fitting.</li><li><b>High variance and low bias</b> - A property of complex models. Suggests over fitting.</li><li>In any Machine Learning model, if the number of parameters is greater than the number of training examples, beware. It leads to over fitting. Try considering a simpler model with lesser number of parameters or reduce the number of hidden layers or anything else to reduce the number of parameters of the model.</li><li>Always normalize the inputs. Neural Networks are optimized for working  on numbers between 0 and 1. Any number greater than 1 leads to explosive  gradient descent, which involves weight updates by large numbers. </li><li>Regularization is very very important. Therefore, consider using an XGBoost model instead of Random Forest.</li></ul>Some terms to keep in mind:<br /><ul style="text-align: left;"><li><b>Stratified Sampling</b> - When the training data is overly skewed, the practice of picking the samples such the final training data has the distribution you need.</li><li><b>Bootstrapping</b> - Evaluating the same model with different random seeds.&nbsp; </li></ul><ul style="text-align: left;"></ul></div>

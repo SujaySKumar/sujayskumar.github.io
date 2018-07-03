@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+title:            Sujay S Kumar
+tagline:          'Machine Learning Engineer (NLP)'
+description:      'Solving language problems for a billion Indians at <a href="https://vernacular.ai">vernacular.ai</a>'
+url:              http://sujayskumar.com
+baseurl:          /
+
+author:
+  name:           'Sujay S Kumar'
+  url:            http://sujayskumar.com
+
+# Gems
+plugins: [jekyll-paginate, jekyll-gist]
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/SujaySKumar
