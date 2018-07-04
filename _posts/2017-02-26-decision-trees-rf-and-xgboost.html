@@ -9,4 +9,84 @@ blogger_id: tag:blogger.com,1999:blog-925060870564624560.post-503820693988228126
 blogger_orig_url: http://sujayskumar.blogspot.com/2017/02/decision-trees-rf-and-xgboost.html
 ---
 
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="ltr" style="text-align: left;" trbidi="on"><div><div><div>Decision Trees are one of the most intuitive models in the world of perplexing and obscure ML models. This is because of the similarity in the human decision making process and a decision tree.<br />&nbsp;&nbsp;&nbsp; A decision tree can be visualized and we can actually see how a computer arrived at a decision, which is rather difficult in case of other models. Hence, it is also called as a white box model.<br />&nbsp;&nbsp;&nbsp; The purpose of this post is to explore some of the intuition behind building a stand alone decision tree and it's ensemble variants, <i>Random Forests (RF)</i> and <i>Extreme Gradient Boosting (XGB)</i>.<br /><br /><b>Decision Trees:</b><br /><b>What is a Decision Tree?</b><br /><br />A decision tree is a tree in which each node denotes a decision and the corresponding path to take depending on the decision made.<br />&nbsp;&nbsp;&nbsp; Decision trees are versatile and are widely used for both classification and regression models and are called CART (Classification and Regression Trees).<br />&nbsp;&nbsp;&nbsp; One of the main advantages of a decision tree is it's ability to handle missing data gracefully.<br /><br /><b>How is a decision tree built?</b><br /><br />There are two metrics on which a decision tree is built, <i>Information Gain</i> and <i>Standard Deviation</i>. Information gain is used to build a classification tree and standard deviation is used to build a regression tree.<br /><br />In this post, I will be using a regression tree as an example.<br /><br /><ul style="text-align: left;"><li>Decision tree is built in a top down approach.</li><li>The goal of a tree is to partition the data into subsets such that each subset contains homogeneous values (with same target classes in case of classification and with minimum standard deviation in case of regression).</li><a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&amp;space;S(T)&amp;space;=&amp;space;\sqrt{\frac{\sum&amp;space;(x-\mu&amp;space;)^{2}}{N}}\;&amp;space;\mu\rightarrow&amp;space;mean" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&amp;space;S(T)&amp;space;=&amp;space;\sqrt{\frac{\sum&amp;space;(x-\mu&amp;space;)^{2}}{N}}\;&amp;space;\mu\rightarrow&amp;space;mean" title="S(T) = \sqrt{\frac{\sum (x-\mu )^{2}}{N}}\; \mu\rightarrow mean" /></a><a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&amp;space;Entropy\;&amp;space;H(X)&amp;space;=&amp;space;-\sum&amp;space;p(X)\log&amp;space;p(X)\\&amp;space;Information\&amp;space;Gain\;&amp;space;I(X,Y)=&amp;space;H(X)-H(X|Y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&amp;space;Entropy\;&amp;space;H(X)&amp;space;=&amp;space;-\sum&amp;space;p(X)\log&amp;space;p(X)\\&amp;space;Information\&amp;space;Gain\;&amp;space;I(X,Y)=&amp;space;H(X)-H(X|Y)" title="Entropy\; H(X) = -\sum p(X)\log p(X)\\ Information\ Gain\; I(X,Y)= H(X)-H(X|Y)" /></a><li>In case of regression, if the sample is homogeneous i.e equal valued, standard deviation is 0.</li><li>In case of regression, the goal is to decrease the standard deviation after the data is split into subsets. Hence, the attribute that can provide the highest decrease in standard deviation is chosen.</li><li>In case of classification, the attribute that can provide the highest information gain is chosen.</li><li>In simple words, a decision tree can be viewed as a decision table. If the  tree is allowed to grow till the last depth, each leaf node will have  only one sample. If the training data has all possible permutations of  the independent variables, the decision tree becomes a representation of  a truth table. </li></ul></div>High level steps in building a regression tree are as follows:<br /><ul style="text-align: left;"><li>Step 1: Calculate the standard deviation of the target (dependant) variable S(T).</li><li>Step 2:&nbsp;</li></ul></div><ul style="text-align: left;"><ul><li>Split the data on all the attributes (X).</li><li>Calculate the standard deviation of the subsets S(T,X).</li><li>Choose the attribute with the highest difference.</li><li>SDR(T,X) = S(T) - S(T,X)</li></ul></ul><ul style="text-align: left;"><li>Step 3: Split the data according to the decision attribute selected in the previous step.</li><li>Step 4: Repeat the process recursively.</li><li>Step 5: We can repeat the process recursively until each subset of the data has 0 standard deviation. This is not feasible at a large scale and it represents a model with very high variation. Hence, we need a termination criteria. For example, the termination criteria could be that the standard deviation at each leaf node must be lesser than 5%&nbsp; or that each node must contain a minimum number of data points.</li><li>Step 6: When the number of data points at a leaf node is more than one, the average of the target variable is taken as the output at that node.</li></ul></div>&nbsp; <br /><b>How does a decision tree handle missing data?</b><br /><br />During the process of building a tree, at each decision node, a decision is made for the missing data. All the data points with the missing data is first clubbed with the left subtree and the drop in standard deviation is calculated. The same is done by combining the missing data points with the right subtree. The branch with the highest drop in standard deviation is assigned to be the path to be followed for missing data points.<br /><br /><b>What are ensembles and why do we need them?</b><br /><br />Ensembles are a combination of various learning models which is practically observed to provide a better performance than stand alone la carte models. This practise is also called as bagging.<br /><br />One of the main disadvantage of a stand alone model, like a decision tree,which is addressed by an ensemble, is that they are prone to over fitting (high variance). Ensembles are used to average out the noisy data and unbiased (or low biased) models and to create a low variance model.<br /><br />Two such ensembles for decision trees are Random Forest and XGBoost.<br /><br />The fundamental issue that both RF and XGB try to address is that decision trees are weak learners (prone to over fitting and depends heavily on the training distribution). Hence, by combining a number of weak learners, we can build a strong learner.<br /><br /><ul style="text-align: left;"><li>RF consists of a large number of decorrelated decision trees.</li><li>Given a training data set, we create a number of subsets randomly. These subsets can be based on random selection of data or features (variables). These subsets can be overlapping.</li><li>Build a decision tree for each of these subsets.</li><li>In order to get a classification from a RF, the output from each tree can be polled in order to arrive at the decision.</li><li>There can be a number of polling mechanisms, the most common being, the target variable with the highest frequency is chosen i.e the decision arrived to by the majority of the trees. We can also use a weighted average, where certain trees are given more weight-age than others.</li></ul>Another variant of RF is called as XGBoost, which uses gradient boosting in order to build the trees. XGB models are used in cases where the data contains high collinearity. This is called as multicollinearity, where two or more features are highly correlated and one can be predicted with reasonable accuracy given the other.<br /><br />Unlike RF, where the trees are built parallelly with no correlation between the trees, XGB model builds the trees sequentially (and hence, computationally expensive). It learns from each tree and builds the subsequent tree so that the model can better learn the distribution of the target variable i.e the errors are propagated from one tree to the other.<br /><br /><b>How are these models validated?</b><br /><br />RF models are usually validated using Out-Of-Bag (OOB) validation and the XGB models are validated using k-Fold cross validation, which is explored in another post.<br /><br />Given the simplicity and the intuitive nature of these models, they are one of the most widely used models for competitive ML like Kaggle. In fact, XGBoost models have won 65% of the competitions on Kaggle.</div></div>
+Decision Trees are one of the most intuitive models in the world of perplexing and obscure ML models. This is because of the similarity in the human decision making process and a decision tree.
+<br /><br />
+A decision tree can be visualized and we can actually see how a computer arrived at a decision, which is rather difficult in case of other models. Hence, it is also called as a white box model.
+<br /><br />
+The purpose of this post is to explore some of the intuition behind building a stand alone decision tree and it's ensemble variants, \( Random Forests (RF) \) and \( Extreme Gradient Boosting (XGB) \).
+<br /><br />
+<b>Decision Trees:</b>
+<br /><br />
+<b>What is a Decision Tree?</b>
+<br />
+A decision tree is a tree in which each node denotes a decision and the corresponding path to take depending on the decision made.
+<br />
+Decision trees are versatile and are widely used for both classification and regression models and are called CART (Classification and Regression Trees).
+<br />
+One of the main advantages of a decision tree is it's ability to handle missing data gracefully.
+<br /><br />
+<b>How is a decision tree built?</b>
+<br />
+There are two metrics on which a decision tree is built, \( Information Gain \) and \( Standard Deviation \). Information gain is used to build a classification tree and standard deviation is used to build a regression tree.
+<br /><br />
+In this post, I will be using a regression tree as an example.
+<br /><br />
+<ul style="text-align: left;">
+    <li>Decision tree is built in a top down approach.</li>
+    <li>The goal of a tree is to partition the data into subsets such that each subset contains homogeneous values (with same target classes in case of classification and with minimum standard deviation in case of regression).</li>
+    $$S(T) = \sqrt{\frac{\sum (x-\mu )^{2}}{N}}\; \mu\rightarrow mean$$
+    $$Entropy\; H(X) = -\sum p(X)\log p(X)\\ Information\ Gain\; I(X,Y)= H(X)-H(X|Y)$$
+    <li>In case of regression, if the sample is homogeneous i.e equal valued, standard deviation is 0.</li>
+    <li>In case of regression, the goal is to decrease the standard deviation after the data is split into subsets. Hence, the attribute that can provide the highest decrease in standard deviation is chosen.</li>
+    <li>In case of classification, the attribute that can provide the highest information gain is chosen.</li>
+    <li>In simple words, a decision tree can be viewed as a decision table. If the  tree is allowed to grow till the last depth, each leaf node will have  only one sample. If the training data has all possible permutations of  the independent variables, the decision tree becomes a representation of  a truth table. </li>
+</ul>
+
+High level steps in building a regression tree are as follows:
+<br />
+<ul style="text-align: left;">
+    <li>Step 1: Calculate the standard deviation of the target (dependant) variable \( S(T) \).</li>
+    <li>Step 2:
+        <ul style="text-align: left;">
+            <li>Split the data on all the attributes \( (X) \).</li>
+            <li>Calculate the standard deviation of the subsets \( S(T,X) \).</li>
+            <li>Choose the attribute with the highest difference.</li>
+            <li>\( SDR(T,X) = S(T) - S(T,X) \)</li>
+        </ul>
+    <li>Step 3: Split the data according to the decision attribute selected in the previous step.</li>
+    <li>Step 4: Repeat the process recursively.</li>
+    <li>Step 5: We can repeat the process recursively until each subset of the data has 0 standard deviation. This is not feasible at a large scale and it represents a model with very high variation. Hence, we need a termination criteria. For example, the termination criteria could be that the standard deviation at each leaf node must be lesser than 5%&nbsp; or that each node must contain a minimum number of data points.</li>
+    <li>Step 6: When the number of data points at a leaf node is more than one, the average of the target variable is taken as the output at that node.</li>
+</ul>
+<br /><br />
+<b>How does a decision tree handle missing data?</b>
+<br />
+During the process of building a tree, at each decision node, a decision is made for the missing data. All the data points with the missing data is first clubbed with the left subtree and the drop in standard deviation is calculated. The same is done by combining the missing data points with the right subtree. The branch with the highest drop in standard deviation is assigned to be the path to be followed for missing data points.
+<br /><br />
+<b>What are ensembles and why do we need them?</b>
+<br />
+Ensembles are a combination of various learning models which is practically observed to provide a better performance than stand alone la carte models. This practise is also called as bagging.
+<br /><br />
+One of the main disadvantage of a stand alone model, like a decision tree,which is addressed by an ensemble, is that they are prone to over fitting (high variance). Ensembles are used to average out the noisy data and unbiased (or low biased) models and to create a low variance model.
+<br /><br />
+Two such ensembles for decision trees are Random Forest and XGBoost.
+<br /><br />
+The fundamental issue that both RF and XGB try to address is that decision trees are weak learners (prone to over fitting and depends heavily on the training distribution). Hence, by combining a number of weak learners, we can build a strong learner.
+<br /><br />
+<ul style="text-align: left;">
+    <li>RF consists of a large number of decorrelated decision trees.</li>
+    <li>Given a training data set, we create a number of subsets randomly. These subsets can be based on random selection of data or features (variables). These subsets can be overlapping.</li>
+    <li>Build a decision tree for each of these subsets.</li>
+    <li>In order to get a classification from a RF, the output from each tree can be polled in order to arrive at the decision.</li>
+    <li>There can be a number of polling mechanisms, the most common being, the target variable with the highest frequency is chosen i.e the decision arrived to by the majority of the trees. We can also use a weighted average, where certain trees are given more weight-age than others.</li>
+</ul>
+
+Another variant of RF is called as XGBoost, which uses gradient boosting in order to build the trees. XGB models are used in cases where the data contains high collinearity. This is called as multicollinearity, where two or more features are highly correlated and one can be predicted with reasonable accuracy given the other.
+<br /><br />
+Unlike RF, where the trees are built parallelly with no correlation between the trees, XGB model builds the trees sequentially (and hence, computationally expensive). It learns from each tree and builds the subsequent tree so that the model can better learn the distribution of the target variable i.e the errors are propagated from one tree to the other.
+<br /><br />
+<b>How are these models validated?</b>
+<br />
+RF models are usually validated using Out-Of-Bag (OOB) validation and the XGB models are validated using k-Fold cross validation, which is explored in another post.
+<br /><br />
+Given the simplicity and the intuitive nature of these models, they are one of the most widely used models for competitive ML like Kaggle. In fact, XGBoost models have won 65% of the competitions on Kaggle.

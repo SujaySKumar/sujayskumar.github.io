@@ -9,4 +9,50 @@ blogger_id: tag:blogger.com,1999:blog-925060870564624560.post-573013779843417147
 blogger_orig_url: http://sujayskumar.blogspot.com/2017/02/neural-network-to-detect-any-pattern-in.html
 ---
 
-<div dir="ltr" style="text-align: left;" trbidi="on"><div><div>It is officially declared that the process of awarding H1B visas by the government of US is based on a lottery system i.e a random process.<br /><br />Therefore, as a random project, I decided to cross verify the claim. Is it truly random or is there a pattern underlying that is not apparent?<br /><br />The US government releases the data of all applications for H1B and the status of whether they were certified or not. You can find the data at <a href="https://www.foreignlaborcert.doleta.gov/h-1b.cfm" target="_blank">United States Department of Labour</a>.<br /><br />I built a neural network in order to model this problem, where the features considered were:<br /><ul style="text-align: left;"><li>VISA_CLASS</li><li>EMPLOYER_NAME</li><li>SOC_NAME</li><li>NAIC_CODE</li><li>PREVAILING_WAGE</li><li>PW_UNIT_OF_PAY</li><li>H1-B_DEPENDANT</li><li>WILLFUL_VIOLATOR</li><li>WORKSITE_STATE</li></ul>There were around 647000 data points for 2016 alone, with the target classes being<br /><ul style="text-align: left;"><li>CERTIFIED</li><li>CERTIFIED_WITHDRAWN</li><li>WITHDRAWN</li><li>DENIED</li></ul></div>Initially, I was getting around 94% accuracy in the first epoch itself. I realised that I failed to understand the data and to build a baseline model first. You can read about the importance of building a baseline model in my blog post here, <a href="http://sujayskumar.blogspot.in/2017/02/importance-of-baseline-model.html" target="_blank">Importance of Baseline Models</a>.<br /><br />The data suggested that 89% of the 647000 data points were falling under the 'DENIED' category. The baseline model itself was giving me 89%. Hence, it was no wonder that the model was showing such high accuracies.<br /><br />In order to handle such a skewed dataset, I decided to create my own dataset with the following distributions:<br /><ul style="text-align: left;"><li>CERTIFIED - 40%</li><li>CERTIFIED_WITHDRAWN - 20%</li><li>WITHDRAWN - 20%</li><li>DENIED - 20%</li></ul></div>From this distribution, we can clearly see that the baseline accuracy should be 40%. Due to the limitations on my personal computer, I was able to take only 50000 data points for training. The performance of the model was 61%. A bump in 21% accuracy is nothing to be ignored. At the same time, it does not conclusively prove that the process of awarding H1B visas has any underlying pattern.<br /><br />I have some more modifications in mind, that I believe would improve the model and can point to some conclusion. I will update this post once I am done with that.<br /><br />Also, using at least 80% of the data set for training might throw some new light on the pattern. Also, considering more features might help better the model. This would require significant computing power. This would enable us to build a more complicated and deeper neural network that might be able to capture the underlying pattern, if any.<br /><br />But for now,it seems that there is nothing that can be said about the randomness of H1B visas.</div>
+It is officially declared that the process of awarding H1B visas by the government of US is based on a lottery system i.e a random process.
+<br /><br />
+Therefore, as a random project, I decided to cross verify the claim. Is it truly random or is there a pattern underlying that is not apparent?
+<br /><br />
+The US government releases the data of all applications for H1B and the status of whether they were certified or not. You can find the data at <a href="https://www.foreignlaborcert.doleta.gov/h-1b.cfm" target="_blank">United States Department of Labour</a>.
+<br /><br />
+I built a neural network in order to model this problem, where the features considered were:
+<br /><br />
+<ul style="text-align: left;">
+    <li>VISA_CLASS</li>
+    <li>EMPLOYER_NAME</li>
+    <li>SOC_NAME</li>
+    <li>NAIC_CODE</li>
+    <li>PREVAILING_WAGE</li>
+    <li>PW_UNIT_OF_PAY</li>
+    <li>H1-B_DEPENDANT</li>
+    <li>WILLFUL_VIOLATOR</li>
+    <li>WORKSITE_STATE</li>
+</ul>
+There were around 647000 data points for 2016 alone, with the target classes being
+<br /><br />
+<ul style="text-align: left;">
+    <li>CERTIFIED</li>
+    <li>CERTIFIED_WITHDRAWN</li>
+    <li>WITHDRAWN</li>
+    <li>DENIED</li>
+</ul>
+
+Initially, I was getting around 94% accuracy in the first epoch itself. I realised that I failed to understand the data and to build a baseline model first. You can read about the importance of building a baseline model in my blog post here, <a href="http://sujayskumar.blogspot.in/2017/02/importance-of-baseline-model.html" target="_blank">Importance of Baseline Models</a>.
+<br /><br />
+The data suggested that 89% of the 647000 data points were falling under the 'DENIED' category. The baseline model itself was giving me 89%. Hence, it was no wonder that the model was showing such high accuracies.
+<br /><br />
+In order to handle such a skewed dataset, I decided to create my own dataset with the following distributions:
+<br /><br />
+<ul style="text-align: left;">
+    <li>CERTIFIED - 40%</li>
+    <li>CERTIFIED_WITHDRAWN - 20%</li>
+    <li>WITHDRAWN - 20%</li>
+    <li>DENIED - 20%</li>
+</ul>
+From this distribution, we can clearly see that the baseline accuracy should be 40%. Due to the limitations on my personal computer, I was able to take only 50000 data points for training. The performance of the model was 61%. A bump in 21% accuracy is nothing to be ignored. At the same time, it does not conclusively prove that the process of awarding H1B visas has any underlying pattern.
+<br /><br />
+I have some more modifications in mind, that I believe would improve the model and can point to some conclusion. I will update this post once I am done with that.
+<br /><br />
+Also, using at least 80% of the data set for training might throw some new light on the pattern. Also, considering more features might help better the model. This would require significant computing power. This would enable us to build a more complicated and deeper neural network that might be able to capture the underlying pattern, if any.
+<br /><br />
+But for now,it seems that there is nothing that can be said about the randomness of H1B visas.
