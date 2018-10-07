@@ -122,13 +122,13 @@ Chomsky talks of a finite state machine (finite state grammar) that can be used 
     We then apply the *morphophonemics* to arrive at the final sentence.
     
     
-    ![img-three-step](/assets/three-step-grammar.png)
+    ![img-three-step](/assets/syntactic_structure/three-step-grammar.png)
 
 <a id="org361b56c"></a>
 
 ### Procedure for formalizing computational linguistics
 
-![img](/assets/grammar-machine.png)
+![img](/assets/syntactic_structure/grammar-machine.png)
 
 Of the 3 approaches outlined in the diagram above, Chomsky proposes to choose the one in which we can come to a reasonable solution to, hence evaluation. He says, generating (discovery) of the correct grammar given a data corpus is not feasible (*we know this is not true now, because we can build language models given a huge corpus*).
 
