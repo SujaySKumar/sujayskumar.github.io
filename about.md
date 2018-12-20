@@ -29,7 +29,7 @@ title: About
 
 <!-- Thanks for reading! -->
 
-I am a Machine Learning Engineer specializing in Natural Language Processing. 
+I am a Machine Learning Engineer and Consultant specializing in Natural Language Processing. 
 
 At [vernacular.ai](https://vernacular.ai), I am building enterprise language solutions to cater to a billion Indians who interact on digital platforms in Indian languages.  
 
