@@ -35,4 +35,4 @@ At [vernacular.ai](https://vernacular.ai), I am building enterprise language sol
 
 I am an avid reader, blogger, engineer and a trekker.
 
-I am available on email at [sujay@sujayskumar.com](mailto:sujay@sujayskumar.com)
+I am available on email at [contact@sujayskumar.com](mailto:contact@sujayskumar.com)
