@@ -29,9 +29,11 @@ title: About
 
 <!-- Thanks for reading! -->
 
-I am a Machine Learning Engineer and Consultant specializing in Natural Language Processing. 
+I am a Lead Machine Learning Engineer and Consultant specializing in Natural Language Processing. 
 
-At [vernacular.ai](https://vernacular.ai), I am building enterprise language solutions to cater to a billion Indians who interact on digital platforms in Indian languages.  
+At [hypersonix.ai](http://hypersonix.ai), I am building a native speech and conversational interface to enterprise business intelligence and analytics. Along with a small team of engineers based in San Jose and India, we are bringing a Jarvis-like experience to the world of analytics.
+
+Previously at [vernacular.ai](https://vernacular.ai), I was building enterprise language solutions to cater to a billion Indians who interact on digital platforms in Indian languages. I built in-house Automated Speech Recognition (ASR) engines in 10 Indian languages to replace Google's ASR for on-prem deployment. I also built the Natural Language Understanding and Dialogue Management components for handling conversations. Think Google Duplex, but in 10 Indian languages and in-house.
 
 I am an avid reader, blogger, engineer and a trekker.
 

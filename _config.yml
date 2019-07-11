@@ -8,8 +8,8 @@ relative_permalinks: false
 
 # Setup
 title:            Sujay S Kumar
-tagline:          'Machine Learning Engineer (NLP)'
-description:      'Solving language problems for a billion Indians at <a href="https://vernacular.ai">vernacular.ai</a>'
+tagline:          'Lead Machine Learning Engineer (NLP)'
+description:      'Building speech and conversational interfaces at <a href="http://hypersonix.ai">hypersonix.ai</a>'
 url:              http://sujayskumar.com
 baseurl:          /
 
