@@ -56,6 +56,6 @@ Now, the ELMo representation of this word (which is task dependent) is expressed
 
 $$ELMo_{k}^{task} = \gamma^{task}\sum_{j=0}^{L}s_{j}^{task}h_{k,j}$$
 
-where \( \gamma^{task} \) is a scaling parameter.
+where $$\gamma^{task}$$ is a scaling parameter.
 
-Both \( \gamma^{task} \) and \( s_{j}^{task} \) are learnable parameters that are trained specific to the NLP task at hand.
+Both $$\gamma^{task}$$ and $$s_{j}^{task}$$ are learnable parameters that are trained specific to the NLP task at hand.
