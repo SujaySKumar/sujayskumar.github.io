@@ -18,5 +18,10 @@ Now that we are faced with the reality of deploying these models in the real wor
 
 The purpose of this blog series is to explore some of the ways we can achieve machine learning interpretability and keep this in mind before developing any new machine learning applications.
 
-Resources:
+**Links to the blog series:**
+
+1. [Part 1: Evaluation and Consequences]({% post_url 2019-07-10-interpreting-machine-learning-part1 %})
+
+**Resources:**
+
 [Interpretable ML Book](https://christophm.github.io/interpretable-ml-book/)
