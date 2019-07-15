@@ -21,7 +21,8 @@ The purpose of this blog series is to explore some of the ways we can achieve ma
 **Links to the blog series:**
 
 1. [Part 1: Evaluation and Consequences]({% post_url 2019-07-10-interpreting-machine-learning-part1 %})
+2. [Part 2: Interpretable Machine Learning Models]({% post_url 2019-07-10-interpreting-machine-learning-part2 %})
 
-**Resources:**
+**Citations:**
 
-[Interpretable ML Book](https://christophm.github.io/interpretable-ml-book/)
+- Molnar, Christoph. "Interpretable machine learning. A Guide for Making Black Box Models Explainable", 2019. https://christophm.github.io/interpretable-ml-book/.
