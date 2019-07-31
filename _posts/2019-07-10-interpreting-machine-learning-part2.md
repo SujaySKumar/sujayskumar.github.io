@@ -6,6 +6,8 @@ author: Sujay S Kumar
 tags: 
 ---
 
+Link to start of the blog series: [Interpretable ML]({% post_url 2019-07-10-interpreting-machine-learning %})
+
 ## Type 1 : Interpretable Machine Learning Models
 
 In this post, we will be going over some of the machine learning models that can be interpreted intrinsically. This will not be an in-depth review of the models themselves, rather an exploration of how these models lend themselves to interpretability.

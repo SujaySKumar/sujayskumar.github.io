@@ -6,6 +6,8 @@ author: Sujay S Kumar
 tags: 
 ---
 
+Link to start of the blog series: [Interpretable ML]({% post_url 2019-07-10-interpreting-machine-learning %})
+
 This post explores the different types of interpretability, relationships, consequences and evaluation of machine learning interpretability.
 
 ### Types of interpretability

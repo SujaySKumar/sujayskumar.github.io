@@ -26,3 +26,5 @@ The purpose of this blog series is to explore some of the ways we can achieve ma
 **Citations:**
 
 - Molnar, Christoph. "Interpretable machine learning. A Guide for Making Black Box Models Explainable", 2019. https://christophm.github.io/interpretable-ml-book/.
+- [Explainable AI for Science and Medicine](https://www.youtube.com/watch?v=B-c8tIgchu0) by Microsoft
+- [Software for Explainable AI](https://github.com/slundberg/shap)
