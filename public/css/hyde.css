@@ -70,6 +70,17 @@ html {
   }
 }
 
+/* Sidebar avatar */
+.avatar-parent {
+    text-align: center;
+}
+.sidebar img {
+    display: inline;
+    margin: 0;
+    max-width: 40%;
+    height: auto;
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;
