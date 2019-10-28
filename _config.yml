@@ -10,12 +10,12 @@ relative_permalinks: false
 title:            Sujay S Kumar
 tagline:          'Lead Machine Learning Engineer (NLP)'
 description:      'Building speech and conversational interfaces at <a href="http://hypersonix.ai">hypersonix.ai</a>'
-url:              http://sujayskumar.com
+url:              https://sujayskumar.com
 baseurl:          /
 
 author:
   name:           'Sujay S Kumar'
-  url:            http://sujayskumar.com
+  url:            https://sujayskumar.com
 
 # Gems
 plugins: [jekyll-paginate, jekyll-gist]
