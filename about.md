@@ -29,11 +29,17 @@ title: About
 
 <!-- Thanks for reading! -->
 
-I am a Lead Machine Learning Engineer and Consultant specializing in Natural Language Processing. 
+I am a *Lead Machine Learning Engineer and Consultant* specializing in Natural Language Processing (NLP). 
 
-At [hypersonix.ai](http://hypersonix.ai), I am building a native speech and conversational interface to enterprise business intelligence and analytics. Along with a small team of engineers based in San Jose and India, we are bringing a Jarvis-like experience to the world of analytics.
+At [hypersonix.ai](https://hypersonix.ai/), I am building a native conversational interface to enterprise business intelligence and analytics, with focus on Natural Language Understanding (NLU), Entity Extraction, Recommendations and Dialogue. Along with a small team of engineers based in California, US and Bangalore, India, we are bringing a Jarvis-like experience to the world of analytics.
 
-Previously at [vernacular.ai](https://vernacular.ai), I was building enterprise language solutions to cater to a billion Indians who interact on digital platforms in Indian languages. I built in-house Automated Speech Recognition (ASR) engines in 10 Indian languages to replace Google's ASR for on-prem deployment. I also built the Natural Language Understanding and Dialogue Management components for handling conversations. Think Google Duplex, but in 10 Indian languages and in-house.
+**About Hypersonix:**
+An Artificial Intelligence (AI) startup in the data analytics space, [Hypersonix Inc](https://hypersonix.ai/) provides an easy-to-use natural language interface to BI, democratizing BI  and enabling users unfamiliar with analytics tools to access intelligence with a click of a button or a natural language query. [Hypersonix Inc](https://hypersonix.ai/) raised $11.5 million in Series-A led by Intel Capital in May 2020: [WSJ Article](https://www.wsj.com/articles/intels-venture-arm-acquires-minority-stake-in-analytics-startup-11588329001)
+
+Previously at [vernacular.ai](https://vernacular.ai/), I built in-house streaming and long-duration Automated Speech Recognition (ASR) engines in 10 Indian languages to replace Google's ASR for on-prem deployment. I also built the Natural Language Understanding (NLU) and Dialogue Management components for handling conversations. Think Google Duplex, but in 10 Indian languages and in-house.
+
+**About Vernacular.ai:**
+[Vernacular.ai](https://vernacular.ai/) is a conversational AI startup in India working on call center automation. [Vernacular.ai](https://vernacular.ai/) builds products that automates call center conversations to handle routine queries. In order to enable this, [Vernacular.ai](https://vernacular.ai/) built a voice platform on multiple Indian languages with highly accurate in-house speech recognition models for each language with code-switching, speaker diarization. keyword spotting and intent identification. 
 
 I am an avid reader, blogger, engineer and a trekker.
 
