@@ -8,8 +8,8 @@ relative_permalinks: false
 
 # Setup
 title:            Sujay S Kumar
-tagline:          'Lead Machine Learning Engineer (NLP)'
-description:      'Building speech and conversational interfaces at <a href="http://hypersonix.ai">hypersonix.ai</a>'
+tagline:          'Technical Architect and Lead - Natural Language Processing (NLP)'
+description:      'Building natural language, speech and conversational interfaces at <a href="http://hypersonix.ai">hypersonix.ai</a>'
 url:              https://sujayskumar.com
 baseurl:          /
 
@@ -18,7 +18,7 @@ author:
   url:            https://sujayskumar.com
 
 # Gems
-plugins: [jekyll-paginate, jekyll-gist]
+plugins: [jekyll-paginate, jekyll-gist, jekyll-seo-tag, jekyll-sitemap]
 paginate:         5
 
 # Custom vars
