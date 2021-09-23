@@ -29,17 +29,17 @@ title: About
 
 <!-- Thanks for reading! -->
 
-I am a *Lead Machine Learning Engineer and Consultant* specializing in Natural Language Processing (NLP). 
+I am a *Lead Machine Learning Engineer* specializing in Natural Language Processing (NLP). I am currently pursuing my Masters in Intelligent Information Systems at the School of Computer Science at Carnegie Mellon University (SCS at CMU). My main research focus is Speech and Language Understanding (SLU). 
 
-At [hypersonix.ai](https://hypersonix.ai/), I am building a native conversational interface to enterprise business intelligence and analytics, with focus on Natural Language Understanding (NLU), Entity Extraction, Recommendations and Dialogue. Along with a small team of engineers based in California, US and Bangalore, India, we are bringing a Jarvis-like experience to the world of analytics.
+At [hypersonix.ai](https://hypersonix.ai/), I built a native conversational interface to enterprise business intelligence and analytics, with focus on Natural Language Understanding (NLU), Entity Extraction, Recommendations and Dialogue. Along with a small team of engineers based in California, US and Bangalore, India, we developed a Jarvis-like experience to the world of analytics.
 
 **About Hypersonix:**
-An Artificial Intelligence (AI) startup in the data analytics space, [Hypersonix Inc](https://hypersonix.ai/) provides an easy-to-use natural language interface to BI, democratizing BI  and enabling users unfamiliar with analytics tools to access intelligence with a click of a button or a natural language query. [Hypersonix Inc](https://hypersonix.ai/) raised $11.5 million in Series-A led by Intel Capital in May 2020: [WSJ Article](https://www.wsj.com/articles/intels-venture-arm-acquires-minority-stake-in-analytics-startup-11588329001)
+An Artificial Intelligence (AI) startup in the data analytics space, [Hypersonix Inc](https://hypersonix.ai/) provides an easy-to-use natural language interface to BI, democratizing BI  and enabling users unfamiliar with analytics tools to access intelligence with a click of a button or a natural language query. [Hypersonix Inc](https://hypersonix.ai/) raised $35 million in Series-B.
 
 Previously at [vernacular.ai](https://vernacular.ai/), I built in-house streaming and long-duration Automated Speech Recognition (ASR) engines in 10 Indian languages to replace Google's ASR for on-prem deployment. I also built the Natural Language Understanding (NLU) and Dialogue Management components for handling conversations. Think Google Duplex, but in 10 Indian languages and in-house.
 
 **About Vernacular.ai:**
-[Vernacular.ai](https://vernacular.ai/) is a conversational AI startup in India working on call center automation. [Vernacular.ai](https://vernacular.ai/) builds products that automates call center conversations to handle routine queries. In order to enable this, [Vernacular.ai](https://vernacular.ai/) built a voice platform on multiple Indian languages with highly accurate in-house speech recognition models for each language with code-switching, speaker diarization. keyword spotting and intent identification. 
+[Vernacular.ai](https://vernacular.ai/) is a conversational AI startup in India working on call center automation. [Vernacular.ai](https://vernacular.ai/) builds products that automates call center conversations to handle routine queries. 
 
 I am an avid reader, blogger, engineer and a trekker.
 
